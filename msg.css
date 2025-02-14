@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    font-family: 'Dancing Script', cursive;
+    color: #333;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 600;
+    position: absolute;
+    top: 97%;
+    left: 20%;
+    right: 20%;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient( rgb(252, 139, 139), rgb(255, 169, 184));
+    color: white;
+}
+
+
+.love-letter {
+    position: relative;
+    width: 400px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.heart {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: #ff6b6b;
+    clip-path: polygon(
+        50% 15%,
+        70% 0%,
+        85% 15%,
+        100% 35%,
+        100% 70%,
+        50% 100%,
+        0% 70%,
+        0% 35%,
+        15% 15%,
+        30% 0%
+    );
+    animation: heartbeat 1.5s infinite;
+}
+
+.letter h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+.letter p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.letter .signature {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ff6b6b;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1);
+    }
+}
